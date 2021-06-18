@@ -488,6 +488,7 @@ footer aside ul {
     background-color: transparent;
     border: none;
     font-size: xx-large;
+    box-shadow: none;
 }
 
 .slideshow button:nth-child(1) {

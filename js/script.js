@@ -200,16 +200,16 @@ document.addEventListener("readystatechange", (event) => {
             }
         });
 
-        window.onresize = () => {
-            console.log(`New window size of ${window.innerWidth} x ${window.innerHeight}`)
-            if (window.innerWidth > 1200) {
-                console.log("Entering Desktop mode");
-            } else if (window.innerWidth > 700) {
-                console.log("Entering Tablet mode");
-            } else {
-                console.log("Entering Mobile mode");
-            }
-        }
+        // window.onresize = () => {
+        //     console.log(`New window size of ${window.innerWidth} x ${window.innerHeight}`)
+        //     if (window.innerWidth > 1200) {
+        //         console.log("Entering Desktop mode");
+        //     } else if (window.innerWidth > 700) {
+        //         console.log("Entering Tablet mode");
+        //     } else {
+        //         console.log("Entering Mobile mode");
+        //     }
+        // }
 
         // TODO: pre-fill form when clicking from map
         // https://stackoverflow.com/questions/901115/how-can-i-get-query-string-values-in-javascript
