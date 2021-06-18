@@ -39,7 +39,7 @@ window.addEventListener("load", () => {
     let roomData = getSelectedRoom();
     let roomChoice = document.getElementById("room-type");
     let roomDays = document.getElementById("no-days");
-    console.log(`Got data as ${roomData}`);
+    // console.log(`Got data as ${roomData}`);
     if (roomData !== null) {
         roomChoice.value = roomData[0] + "-room";
         roomDays.value = roomData[1];

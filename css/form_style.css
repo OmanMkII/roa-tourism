@@ -45,5 +45,10 @@ form * {
 }
 
 input, select {
-    color: grey;
+    color: #222426;
+    border-radius: 5px;
+}
+
+label {
+    font-size: x-large;
 }
