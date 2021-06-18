@@ -1,0 +1,71 @@
+/* Some specific styles for the added buttons in the rooms page */
+
+.image > .image {
+    align-self: flex-start;
+}
+
+.image > .booking {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.booking, .booking .item {
+    padding: 0;
+}
+
+.booking .plus,
+.booking .minus {
+    text-align: center;
+    font-size: xx-large;
+}
+
+.booking .value,
+.booking p {
+    text-align: center;
+    font-size: x-large;
+    margin: 0;
+}
+
+.booking > div {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+.booking > .header {
+    flex: 1 0 100%;
+    padding-top: 5px;
+    padding-bottom: 10px;
+}
+
+.booking .item {
+    flex: 1 0 auto;
+}
+
+.booking .item * {
+    flex: 2 0 auto;
+}
+
+.booking .item p {
+    flex: 5 0 auto;
+}
+
+.booking .select {
+    height: 35px;
+    border-radius: 4px;
+}
+
+/* Script free option */
+
+noscript {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+}
+
+noscript .select {
+    padding: 0 15px;
+    margin: 10px;
+}

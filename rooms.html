@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="author" content="Eamon O'Brien">
+
+        <link rel="stylesheet" href="css/style.css">
+        <link rel="stylesheet" href="css/rooms_style.css">
+        <link id="theme" rel="stylesheet" type="text/css" href="css/style_dark.css">
+
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+        <script src="js/script.js"></script>
+        <script src="js/book_rooms.js"></script>
+
+        <link rel="shortcut icon" type="image/x-icon" href="favicon.ico" />
+
+        <link rel="preconnect" href="https://fonts.gstatic.com">
+        <link href="https://fonts.googleapis.com/css2?family=Open+Sans+Condensed:ital,wght@0,300;0,700;1,300&display=swap" rel="stylesheet"> 
+        <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@200;300;400;500;600;700&display=swap" rel="stylesheet"> 
+        <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css2?family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap" rel="stylesheet">
+
+        <title>RoA Tourism | Museum</title>
+    </head>
+    <body>
+        <div id="main-body">
+            <header>
+                <!-- Rocket logo adapted from https://www.iconsdb.com/gray-icons/rocket-icon.html -->
+                <img src="images/website_title_shadow.png" alt="RoA Tourism" id="main-logo">
+                <nav id="navbar">
+                    <img src="images/website_title_small_shadow.png" alt="RoA Tourism" id="nav-logo">
+                    <a class="no-style item" href="index.html"><h3>Home</h3></a>
+                    <a class="no-style item" href="explore.html"><h3>Explore</h3></a>
+                    <a class="no-style item selected" href="rooms.html"><h3>Rooms</h3></a>
+                    <a class="no-style item" href="museum.html"><h3>Museum</h3></a>
+                    <a class="no-style item" href="entertainment.html"><h3>Entertainment</h3></a>
+                    <a class="no-style item" href="booking.html"><h3>Book Now!</h3></a>
+                    <div id="light-mode-container">
+                        <button id="dark-mode-button-desktop">
+                            <span id="dark-mode-text-desktop">Light Mode</span>
+                        </button>
+                    </div>
+                    <button id="hamburger" class="no-style">&#9776;</button>
+                </nav>
+                <div id="mobile-menu">
+                    <!-- Empty to allow transitions to work -->
+                </div>
+                <nav id="navbar-mobile">
+                    <img src="images/website_title_small_shadow.png" alt="RoA Tourism" id="mobile-logo">
+                    <a class="no-style item" href="index.html"><h3>Home</h3></a>
+                    <a class="no-style item" href="explore.html"><h3>Explore</h3></a>
+                    <a class="no-style item selected" href="rooms.html"><h3>Rooms</h3></a>
+                    <a class="no-style item" href="museum.html"><h3>Museum</h3></a>
+                    <a class="no-style item" href="entertainment.html"><h3>Entertainment</h3></a>
+                    <a class="no-style item" href="booking.html"><h3>Book Now!</h3></a>
+                    <button id="dark-mode-button-mobile">
+                        <span id="dark-mode-text-mobile">Light Mode</span>
+                    </button>
+                    <button id="mobile-arrow" class="no-style">&#10095;</button>
+                </nav>
+            </header>
+            <section class="container">
+                <noscript>
+                    <!-- Hides the JS dependent +/- style booking and instead links directly -->
+                    <style>
+                        .booking {display: none !important;}
+                    </style>
+                </noscript>
+                <h2 class="header">Entertainment</h2>
+                <article class="header">
+                    <p><em>Our resort currently offers three different suites available for per-night bookings, each has a style unique to a specific point of interest in history (alternate histories included!), and can cater for different types of groups.</em></p>
+                </article>
+                <div class="divider item"></div>
+                <article id="ai-revolution" class="item">
+                    <h3>AI Revolution Master Suite</h3>
+                    <p>Of all the technological revolutions through history, perhaps the most fundamental was the development of Artificial <em>General</em> Intelligence - an intelligence so clever that it could improve and replicate itself. Throughout the early 21st century, this moment (known as "the singularity") was both feared and revered, with many scientists cautious that the step to a General intelligence could lead to the doom of humanity.</p>
+                    <p>While it has not yet been possible to recover evidence of this timeline due to new safety regulations, our architects greatly enjoyed envisioning a world ruled by AGI and what it would be like to live in. This was not the case in our own timeline, and through the exploration of many more only one was found where such a revolt did occur.</p>
+                    <p>For more information about this timeline, visit the <em><a href="museum.html#impossible-future">Impossible Future</a></em> display, coming soon.</p>
+                </article>
+                <aside class="image">
+                    <figure>
+                        <!-- https://www.pexels.com/photo/interior-of-office-building-325229/ -->
+                        <img src="images/server-room-cropped.jpg" alt="Always visible is the superior: a mass of cables and black boxes." width="400">
+                        <figcaption>
+                            The endless hum of the machines keeps the room alive, though some visitors do not appreciate the atmosphere is creates.
+                        </figcaption>
+                    </figure>
+                    <div class="booking">
+                        <h3 class="header">Capacity: 2 Adults</h3>
+                        <em class="item styled">Book For:</em>
+                        <div class="item">
+                            <button class="no-style minus">&#8249;</button>
+                            <span class="value">0</span>
+                            <button class="no-style plus">&#8250;</button>
+                            <p>Days</p>
+                        </div>
+                        <button id="ai-room-button" class="item select">Book Now!</button>
+                    </div>
+                    <noscript>
+                        <a href="booking.html">
+                            <button class="select">
+                                <p>Book Now!</p>
+                            </button>
+                        </a>
+                    </noscript>
+                </aside>
+                <div class="divider item"></div>
+                <aside class="image">
+                    <figure>
+                        <!-- https://unsplash.com/photos/uWYedErgXgU -->
+                        <img src="images/prison-cell.jpg" alt="A dark cell with barred windows." width="400">
+                        <figcaption>
+                            Prisoners languished in cells often poorly lit and too small, rarely was their humanity acknowledged.
+                        </figcaption>
+                    </figure>
+                    <div class="booking">
+                        <h3 class="header">Capacity: 2 Adults, 2 Children</h3>
+                        <em class="item styled">Book For:</em>
+                        <div class="item">
+                            <button class="no-style minus">&#8249;</button>
+                            <span class="value">0</span>
+                            <button class="no-style plus">&#8250;</button>
+                            <p>Days</p>
+                        </div>
+                        <button id="prison-room-button" class="item select">Book Now!</button>
+                    </div>
+                    <noscript>
+                        <a href="booking.html">
+                            <button class="select">
+                                <p>Book Now!</p>
+                            </button>
+                        </a>
+                    </noscript>
+                </aside>
+                <article class="item">
+                    <h3 id="child-slavery">Child Slavery Family Suite</h3>
+                    <!-- It's not 1984 any more.. -->
+                    <p>Though many of the lies of our own timeline has been corrected by the Ministry of Truth, some information still remains difficult to track down and verify, leading to absurd claims such as that of slavery and even discontentment among the greater population. The Ministry of Truth of course quashes all such claims, however our expeditions have found that these conditions do exist in some timelines where the people do not follow the principles laid down by the founders of Utopianism.</p>
+                    <p>The <em>Child Slavery</em> family suite mimics some of the conditions in which owners and slaves live in alternative timelines: a stark contrast of royalty and absolute poverty. Experience the power that a select few people through history have had, from the slave traders of ancient times, to the superpowers of modern days.</p>
+                </article>
+                <div class="divider item"></div>
+                <article class="item">
+                    <h3>Minimalist Studio</h3>
+                    <p>Perhaps one of the more bizarre fashion styles so far discovered in alternate histories is that known as Minimalism.</p>
+                    <!-- prodigal: spending money or using resources freely and recklessly; wastefully extravagant (antonym of minimal) -->
+                    <!-- -ism: suffix forming nouns of action, state, condition, *doctrine* -->
+                    <p>Minimalism is characterised by extreme sparseness and simplicity, a direct contradiction of Prodigalism which current architects and designers thrive on. While at first it appears to be a stripped down version of any designs that might be present today, its beauty becomes more evident in storage and organisation - a feat which our designers have struggled to emulate.</p>
+                    <p>Experience the calming effect of minimalism during your stay, and discover why it became such a popular style in some timelines. Please note that some visitors have experienced mental breaks after spending too long in a minimalist suite, psychological evaluation is offered on exiting.</p>
+                </article>
+                <aside class="image">
+                    <figure>
+                        <!-- https://unsplash.com/photos/nvzvOPQW0gc -->
+                        <img src="images/minimalist-room.jpg" alt="A single desk dominates the room." width="400">
+                        <figcaption>
+                            With less in a room, each item placed can have a significant impact on the balance.
+                        </figcaption>
+                    </figure>
+                    <div class="booking">
+                        <h3 class="header">Capacity: 1 Adult</h3>
+                        <em class="item styled">Book For:</em>
+                        <div class="item">
+                            <button class="no-style minus">&#8249;</button>
+                            <span class="value">0</span>
+                            <button class="no-style plus">&#8250;</button>
+                            <p>Days</p>
+                        </div>
+                        <button id="minimalist-room-button" class="item select">Book Now!</button>
+                    </div>
+                    <noscript>
+                        <a href="booking.html">
+                            <button class="select">
+                                <p>Book Now!</p>
+                            </button>
+                        </a>
+                    </noscript>
+                </aside>
+            </section>
+            <section id="references" class="container">
+                <div class="divider item"></div>
+                <button class="no-style item container">
+                    <h2 class="item">References</h2>
+                    <span id="references-tab" class="item">&#9660;</span>
+                </button>
+                <div class="divider item"></div>
+                <aside id="reference-data" class="item">
+                    <h3>Images</h3>
+                    <p>Icons8. "Gray rocket icon." IconsDB. https://www.iconsdb.com/gray-icons/rocket-icon.html (retrieved June 2 2021).</p>
+                    <p>M. Geissinger. "Interior of office building." Pexels. https://www.pexels.com/photo/interior-of-office-building-325229/ (retrieved June 3 2021).</p>
+                    <p>D. Muller. "Black window frame on dim light photo." Unsplash. https://unsplash.com/photos/uWYedErgXgU (retrieved June 3 2021).</p>
+                    <p>Bench Accounting. "White wooden table near brown chair photo." Unsplash. https://unsplash.com/photos/nvzvOPQW0gc (retrieved June 3 2021).</p>
+                    <h3>JavaScript</h3>
+                    <p>Refsnes Data. "How to create a sticky navbar." W3Schools. https://www.w3schools.com/howto/howto_js_navbar_sticky.asp (retrieved May 17 2021).</p>
+                    <p>Refsnes Data. "How to create a collapsible." W3Schools. https://www.w3schools.com/howto/howto_js_collapsible.asp (retrieved June 1 2021).</p>
+                    <h3>HTML & CSS</h3>
+                    <p>C. Coyier. "A Complete Guide to Flexbox." CSS Tricks. https://css-tricks.com/snippets/css/a-guide-to-flexbox/ (retrieved May 8 2021).</p>
+                    <p>Mozilla. "Noscript tags." MDN. https://developer.mozilla.org/en-US/docs/Web/HTML/Element/noscript (retrieved June 6 2021).</p>
+                </aside>
+            </section>
+        </div>
+        <footer>
+            <img src="images/rocket_logo_shadow.png" alt="Website logo" id="img-logo">
+            <aside>
+                <ul>
+                    <li>Designed by Eamon O'Brien</li>
+                    <li>Republic of Asia Ministry of Tourism</li>
+                    <li>Copyright 2071</li>
+                </ul>
+            </aside>
+            <nav>
+                <h4>Contact Us:</h4>
+                <table>
+                    <tr>
+                        <td>Email:</td>
+                        <td class="table-item"><a href="mailto:support@republicofasia.com">support@republicofasia.com</a></td>
+                    </tr>
+                    <tr>
+                        <td>Phone:</td>
+                        <td class="table-item"><a href="tel:0262777111">02 6277 7111</a></td>
+                    </tr>
+                    <tr>
+                        <td>International:</td>
+                        <td class="table-item"><a href="tel:+61262777111">+61 2 6277 7111</a></td>
+                    </tr>
+                    <tr>
+                        <td>Emergency:</td>
+                        <td class="table-item"><a title="From today, dialling 999 won't get you the emergency services. And that's not the only thing that's changing. Nicer ambulances, faster response times and better-looking drivers mean they’re not just 'the' emergency services – they're 'your' emergency services. So, remember the new number: &#9834; 0118 999 881 999 119 725 3 &#9834;" href="https://www.youtube.com/watch?v=ab8GtuPdrUQ" target="_blank">0118 999 881 999 119 725 3</a></td>
+                    </tr>
+                </table>
+            </nav>
+        </footer>
+    </body>
+</html>

@@ -1,0 +1,508 @@
+/* Font rules: */
+
+/* Titles, headings, sub-headings: Ubuntu */
+/* Main body text: Crimson Text */
+/* Footnotes, captions, etc.: Roboto */
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+html, body {
+    min-height: 100%;
+}
+
+/* Mode of delivery rules: */
+
+/* Desktop: width >= 1200px */
+/* Tablet: width < 1200px */
+/* Mobile: width < 700px */
+
+/* Default mode is desktop, with @media queries adjusting settings */
+/* to suit either mobile or tablet should they be more suitable. */
+
+/* Primary styles for the pages */
+
+h1, h2, #navbar h3 {
+    font-family: 'Ubuntu', serif;
+    text-align: center;
+    font-weight: normal;
+}
+
+h1 {
+    letter-spacing: 0.1em;
+}
+
+p {
+    text-align: justify;
+    text-justify: auto;
+    font-size: 1.2em;
+    line-height: 28px;
+    margin: 5px 0 10px 0;
+}
+
+h3 {
+    font-family: 'Ubuntu', serif;
+    font-size: x-large;
+}
+
+#navbar h3 {
+    font-size: 1.2em;
+}
+
+h4 {
+    font-family: 'Ubuntu', serif;
+    font-size: large;
+}
+
+body {
+    font-family: 'Crimson Text', serif;
+}
+
+figure {
+    font-style: italic;
+}
+
+a.no-style {
+    text-decoration: none;
+    font-weight: normal;
+    color: inherit;
+    cursor: auto;
+}
+
+button.no-style {
+    background-color: transparent;
+    box-shadow: none;
+    border: none;
+}
+
+/* Flexbox styles */
+
+.container {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: right;
+    flex-wrap: wrap;
+    /* padding: 0 25% 50px 25%; */
+    padding: 0 25% 0 25%;
+}
+
+@media only screen and (max-width: 1200px) {
+    /* Tablet & mobile flexbox */
+    .container {
+        padding: 0 2% 50px 2%;
+    }
+}
+
+/* The nav bar */
+
+header #main-logo {
+    display: block;
+    margin: auto;
+    padding: 10px 25%;
+    width: 50%;
+}
+
+#navbar {
+    width: 100%;
+    display: flex;
+    align-items: stretch;
+    flex-flow: row wrap;
+    /* max-height: 44px; */
+    /* to stay over map */
+    z-index: 100;
+}
+
+#navbar .selected {
+    text-decoration: underline;
+}
+
+#navbar .item, #navbar-mobile .item {
+    transition: all 0.5s ease;
+    font-weight: 300;
+    /* line-height is great for asserting height for box it seems */
+    line-height: 33px;
+    padding: 5px 0;
+    flex: 2 0;
+}
+
+#navbar #nav-logo {
+    display: none;
+    transition: all 0.5s ease;
+    align-self: flex-start;
+}
+
+#light-mode-container {
+    flex: 1 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#dark-mode-button-desktop {
+    width: 95%;
+    height: 95%;
+    padding: 2px;
+}
+
+#hamburger {
+    font-size: x-large;
+    padding: 5px;
+}
+
+#navbar .sticky {
+    justify-content: right;
+}
+
+.sticky {
+	position: fixed;
+	left: 0;
+	top: 0;
+}
+
+.sticky #nav-logo {
+    flex: none;
+    max-height: 33px;
+    padding: 5px;
+    display: inline !important;
+}
+
+#mobile-menu {
+    transition: all 0.75s ease;
+    display: none;
+    height: 100vh;
+    width: 100vw;
+    background-color: var(--textbox-background-color);
+    position: fixed;
+    right: 0;
+    top: 0;
+    z-index: 200;
+}
+
+#navbar-mobile {
+    transition: all 0.75s ease;
+    width: 75vw;
+    height: 100%;
+    position: fixed;
+    right: -75vw;
+    top: 0;
+    z-index: 250;
+    display: none;
+    flex-flow: column wrap;
+    align-items: stretch;
+}
+
+#navbar-mobile #mobile-logo {
+    max-width: 60%;
+    padding: 2%;
+}
+
+#navbar-mobile #mobile-arrow {
+    position: absolute;
+    padding: 5px;
+    left: 0;
+    top: 50vh;
+    font-size: xx-large;
+}
+
+#navbar-mobile a {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+
+@media only screen and (max-width: 1200px) {
+    /* Tablet layout */
+}
+
+@media only screen and (max-width: 700px) {
+    /* Mobile layout */
+    #light-mode-container {
+        display: none;
+    }
+
+    #navbar {
+        justify-content: space-between;
+    }
+
+    #navbar .item {
+        min-width: 33%;
+    }
+
+    #navbar-mobile {
+        display: flex;
+    }
+}
+
+/* The page itself */
+
+.title {
+    font-weight: lighter;
+    font-size: xx-large;
+}
+
+h2 {
+    padding: 2%;
+}
+
+.header {
+    flex: 100%;
+    padding: 25px;
+}
+
+.item {
+    flex: 30%;
+    padding: 15px;
+}
+
+.image {
+    flex: 20%;
+    padding: 15px;
+}
+
+.image img, .image figcaption {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+}
+
+.divider {
+    height: 0px;
+    margin: 10px 25px;
+    padding: 0;
+    flex: 1 0 75%;
+}
+
+#hamburger {
+    display: none;
+}
+
+/* TODO: modify size checks, RE: 300ish px -- see forums! */
+@media only screen and (max-width: 1200px) {
+    /* If small screen order text / img / text vertically */
+    .item {
+        flex: 100%;
+    }
+
+    .image {
+        flex: 100%;
+    }
+
+    .image img {
+        width: 80%;
+    }
+}
+
+/* References section (hidden by default) */
+
+#references {
+    margin: 0 1%;
+    justify-content: space-evenly;
+}
+
+#references::after {
+    display: block;
+    content: "";
+    flex: auto;
+}
+
+#references h2 {
+    font-size: x-large;
+}
+
+#references .item {
+    flex: 0 1 auto;
+}
+
+#references .divider {
+    flex: 1 0 25%;
+    margin: 0;
+}
+
+#references button.container {
+    justify-content: space-evenly;
+    box-shadow: none;
+    padding: 0 5%;
+}
+
+#references #references-tab {
+    line-height: 1px;
+}
+
+#reference-data {
+    max-height: 100%;
+    padding: 0;
+    padding-bottom: 25px;
+    overflow: hidden;
+    transition: max-height 0.4s ease-out;
+}
+
+#reference-data p {
+    margin: 0;
+}
+
+#reference-data h3 {
+    padding-top: 15px;
+}
+
+/* The footer */
+
+footer {
+    margin-top: 1px;
+    /* inherited fonts */
+    font-family: 'Roboto';
+    font-weight: lighter;
+    font-size: smaller;
+    /* flex - I put like 20 lines into this and then stack overflow solved it in 2.. */
+    display: flex;
+    align-items: center;
+    padding: 0 25% 0 25%;
+}
+
+.sticky-footer {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 50%;
+}
+
+footer nav {
+    margin: 10px;
+    border-spacing: 2em 0;
+    margin-left: auto;
+}
+
+footer img {
+    width: 110px;
+    padding-left: 10px;
+}
+
+footer h4 {
+    font-size: medium;
+    font-weight: lighter;
+}
+
+footer table, footer tr {
+    padding: 5px 0;
+}
+
+footer .table-item {
+    text-align: right;
+    padding: 1px 0 1px 10px;
+}
+
+footer aside {
+    padding-left: 20px;
+}
+
+footer aside ul {
+	list-style: none;
+}
+
+@media only screen and (max-width: 1200px) {
+    /* Footer shouldn't be centered when on mobile/tablet */
+    footer {
+        padding: 0;
+    }
+
+    .sticky-footer {
+        width: 100%;
+    }
+}
+
+/* Home page */
+
+.homepage .item {
+    height: 100vh;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+}
+
+.homepage .item:nth-child(1) {
+    background-image: url(../images/satellite-orbit.jpg);
+    height: 75vh;
+}
+
+.homepage .item:nth-child(2) {
+    background-image: url(../images/hidden-artifact-cropped.jpg);
+}
+
+.homepage .item:nth-child(3) {
+    background-image: url(../images/resort-room.jpg);
+}
+
+.homepage .item:nth-child(4) {
+    background-image: url(../images/feast-small.jpg);
+}
+
+.homepage .item:nth-child(5) {
+    background-image: url(../images/museum.jpg);
+}
+
+.homepage .item div {
+    padding: 25px 35px;
+    width: 40%;
+    position: relative;
+    top: 25vh;
+    left: 10%;
+}
+
+.homepage .item:nth-child(1) div {
+    top: 20vh;
+}
+
+.homepage .item:nth-child(2n) div {
+    left: 45%;
+}
+
+@media only screen and (max-width: 700px) {
+    /* Mobile view */
+    .homepage .item div {
+        top: 10vh !important;
+        left: 5vw !important;
+    }
+
+    .homepage .item div {
+        width: 80%;
+    }
+}
+
+/* Museum pages */
+
+.slideshow {
+    padding: 25px 50px;
+}
+
+.tns-controls {
+    /* Flatten section for buttons */
+    height: 0;
+}
+
+.slideshow button {
+    /* Don't want a button appearance */
+    background-color: transparent;
+    border: none;
+    font-size: xx-large;
+}
+
+.slideshow button:nth-child(1) {
+    position: relative;
+    left: -2vw;
+    top: 30vh;
+}
+
+.slideshow button:nth-child(2) {
+    position: relative;
+    left: 45vw;
+    top: 30vh;
+}
+
+.tiny-slider {
+    display: flex;
+    align-items: center;
+}

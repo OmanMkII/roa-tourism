@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <!-- NOTE: all paths must are relative, current dir is ~/museum -->
+        <meta charset="UTF-8">
+        <meta name="author" content="Eamon O'Brien">
+
+        <meta name="color-scheme" content="dark light">
+
+        <link rel="stylesheet" href="../css/style.css">
+		<link rel="stylesheet" href="../js/tiny-slider/tiny-slider.css">
+        <link id="theme" rel="stylesheet" type="text/css" href="../css/style_dark.css">
+
+        <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+		<script type="text/javascript" src="../js/tiny-slider/min/tiny-slider.js"></script>
+        <script type="text/javascript" src="../js/script.js"></script>
+        <script type="text/javascript" src="../js/tiny_slider.js"></script>
+
+        <link rel="shortcut icon" type="image/x-icon" href="../favicon.ico" />
+
+        <link rel="preconnect" href="https://fonts.gstatic.com">
+        <link href="https://fonts.googleapis.com/css2?family=Open+Sans+Condensed:ital,wght@0,300;0,700;1,300&display=swap" rel="stylesheet"> 
+        <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@200;300;400;500;600;700&display=swap" rel="stylesheet"> 
+        <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css2?family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap" rel="stylesheet">
+
+        <title>RoA Tourism | On The Shoulders Of Giants</title>
+    </head>
+    <body>
+        <div id="main-body">
+            <header>
+                <!-- Rocket logo adapted from https://www.iconsdb.com/gray-icons/rocket-icon.html -->
+                <img src="../images/website_title_shadow.png" alt="RoA Tourism" id="main-logo">
+                <nav id="navbar">
+                    <img src="../images/website_title_small_shadow.png" alt="RoA Tourism" id="nav-logo">
+                    <a class="no-style item" href="../index.html"><h3>Home</h3></a>
+                    <a class="no-style item" href="../explore.html"><h3>Explore</h3></a>
+                    <a class="no-style item" href="../rooms.html"><h3>Rooms</h3></a>
+                    <a class="no-style item selected" href="../museum.html"><h3>Museum</h3></a>
+                    <a class="no-style item" href="../entertainment.html"><h3>Entertainment</h3></a>
+                    <a class="no-style item" href="../booking.html"><h3>Book Now!</h3></a>
+                    <div id="light-mode-container">
+                        <button id="dark-mode-button-desktop">
+                            <span id="dark-mode-text-desktop">Light Mode</span>
+                        </button>
+                    </div>
+                    <button id="hamburger" class="no-style">&#9776;</button>
+                </nav>
+                <div id="mobile-menu">
+                    <!-- Empty to allow transitions to work -->
+                </div>
+                <nav id="navbar-mobile">
+                    <img src="../images/website_title_small_shadow.png" alt="RoA Tourism" id="mobile-logo">
+                    <a class="no-style item" href="../index.html"><h3>Home</h3></a>
+                    <a class="no-style item" href="../explore.html"><h3>Explore</h3></a>
+                    <a class="no-style item" href="../rooms.html"><h3>Rooms</h3></a>
+                    <a class="no-style item selected" href="../museum.html"><h3>Museum</h3></a>
+                    <a class="no-style item" href="../entertainment.html"><h3>Entertainment</h3></a>
+                    <a class="no-style item" href="../booking.html"><h3>Book Now!</h3></a>
+                    <button id="dark-mode-button-mobile">
+                        <span id="dark-mode-text-mobile">Light Mode</span>
+                    </button>
+                    <button id="mobile-arrow" class="no-style">&#10095;</button>
+                </nav>
+            </header>
+            <section class="container">
+                <h2 class="header">On The Shoulders Of Giants</h2>
+                <section class="slideshow">
+                    <article class="tiny-slider">
+                        <img src="../images/giants/einstein.jpg" alt="Before his descent into madness, President Einstien was a prominent scientific figure.">
+                        <img src="../images/giants/fake-lab.jpg" alt="In some realities, photographers created false scenes where no actual work was done." loading="lazy">
+                        <img src="../images/giants/moonwalk-cropped.jpg" alt="In on reality, the original moon landing succeeded." loading="lazy">
+                        <img src="../images/giants/robot.jpg" alt="The first registered artificial intelligence, named Ava." loading="lazy">
+                        <img src="../images/giants/ufo.jpg" alt="A monument to the second space race that began in the 21st century." loading="lazy">
+                    </article>
+                </section>
+                <article class="museum-article">
+                    <p>Over the course of human history, many great discoveries have been based on the work of previous authors: be it science, warfare, or literature, the evolution of human knowledge is incremental but each step is even more powerful than hte last.</p>
+                    <p>Th is exhibit aims to explore the evolution of sciences and their impact on the fate of humanity through our history, and alternate histories alike. Though we know our history to be one of noble sacrifice and recovery from the third and final World War, other timelines never saw a third war, and others never reached the 20th century.</p>
+                </article>
+            </section>
+            <section id="references" class="container">
+                <div class="divider item"></div>
+                <button class="no-style item container">
+                    <h2 class="item">References</h2>
+                    <span id="references-tab" class="item">&#9660;</span>
+                </button>
+                <div class="divider item"></div>
+                <aside id="reference-data" class="item">
+                    <h3>Images</h3>
+                    <p>Icons8. "Gray rocket icon." IconsDB. https://www.iconsdb.com/gray-icons/rocket-icon.html (retrieved June 2 2021).</p>
+                    <p>Comfreak. "Robot woman face." Pixabay. https://pixabay.com/photos/robot-woman-face-cry-sad-3010309/ (retrieved June 1 2021).</p>
+                    <p>Kellepics. "Fantasy UFO city science." Pixabay. https://pixabay.com/photos/fantasy-ufo-city-science-fiction-2861815/ (retrieved June 2 2021).</p>
+                    <p>Wiki Images. "Space station moon landing apollo." Pixabay. https://pixabay.com/photos/space-station-moon-landing-apollo-15-60615/ (retrieved June 2 2021).</p>
+                    <p>A. George. "Man in black suit jacket figurine." Unsplash. https://unsplash.com/photos/g-fm27_BRyQ (retrieved June 7 2021).</p>
+                    <p>RF Studio. "Teenage student conducting research in chemical laboratory." Pexels. https://www.pexels.com/photo/teenage-student-conducting-research-in-chemical-laboratory-3825412/ (retrieved June 7).</p>
+                    <h3>JavaScript</h3>
+                    <p>W. Lin. "Tiny slider." Git Hub. https://github.com/ganlanyuan/tiny-slider (retrieved May 18 2021).</p>
+                    <p>Refsnes Data. "How to create a sticky navbar." W3Schools. https://www.w3schools.com/howto/howto_js_navbar_sticky.asp (retrieved May 17 2021).</p>
+                    <p>Refsnes Data. "How to create a collapsible." W3Schools. https://www.w3schools.com/howto/howto_js_collapsible.asp (retrieved June 1 2021).</p>
+                    <h3>HTML & CSS</h3>
+                    <p>C. Coyier. "A Complete Guide to Flexbox." CSS Tricks. https://css-tricks.com/snippets/css/a-guide-to-flexbox/ (retrieved May 8 2021).</p>
+                </aside>
+            </section>
+        </div>
+        <footer>
+            <img src="../images/rocket_logo_shadow.png" alt="Website logo" id="img-logo">
+            <aside>
+                <ul>
+                    <li>Designed by Eamon O'Brien</li>
+                    <li>Republic of Asia Ministry of Tourism</li>
+                    <li>Copyright 2071</li>
+                </ul>
+            </aside>
+            <nav>
+                <h4>Contact Us:</h4>
+                <table>
+                    <tr>
+                        <td>Email:</td>
+                        <td class="table-item"><a href="mailto:support@republicofasia.com">support@republicofasia.com</a></td>
+                    </tr>
+                    <tr>
+                        <td>Phone:</td>
+                        <td class="table-item"><a href="tel:0262777111">02 6277 7111</a></td>
+                    </tr>
+                    <tr>
+                        <td>International:</td>
+                        <td class="table-item"><a href="tel:+61262777111">+61 2 6277 7111</a></td>
+                    </tr>
+                    <tr>
+                        <td>Emergency:</td>
+                        <td class="table-item"><a title="From today, dialling 999 won't get you the emergency services. And that's not the only thing that's changing. Nicer ambulances, faster response times and better-looking drivers mean they’re not just 'the' emergency services – they're 'your' emergency services. So, remember the new number: &#9834; 0118 999 881 999 119 725 3 &#9834;" href="https://www.youtube.com/watch?v=ab8GtuPdrUQ" target="_blank">0118 999 881 999 119 725 3</a></td>
+                    </tr>
+                </table>
+            </nav>
+        </footer>
+    </body>
+</html>

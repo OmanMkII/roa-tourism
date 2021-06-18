@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="author" content="Eamon O'Brien">
+
+        <link rel="stylesheet" href="css/style.css">
+        <link rel="stylesheet" href="css/form_style.css">
+        <link id="theme" rel="stylesheet" type="text/css" href="css/style_dark.css">
+
+        <!-- jQuery source -->
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+        
+        <script type="text/javascript" src="js/script.js"></script>
+        <script type="text/javascript" src="js/collapsing_form.js"></script>
+
+        <link rel="shortcut icon" type="image/x-icon" href="favicon.ico" />
+
+        <link rel="preconnect" href="https://fonts.gstatic.com">
+        <link href="https://fonts.googleapis.com/css2?family=Open+Sans+Condensed:ital,wght@0,300;0,700;1,300&display=swap" rel="stylesheet"> 
+        <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@200;300;400;500;600;700&display=swap" rel="stylesheet"> 
+        <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css2?family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap" rel="stylesheet">
+
+        <title>RoA Tourism | Bookings</title>
+    </head>
+    <body>
+        <div id="main-body">
+            <header>
+                <!-- Rocket logo adapted from https://www.iconsdb.com/gray-icons/rocket-icon.html -->
+                <img src="images/website_title_shadow.png" alt="RoA Tourism" id="main-logo">
+                <nav id="navbar">
+                    <img src="images/website_title_small_shadow.png" alt="RoA Tourism" id="nav-logo">
+                    <a class="no-style item" href="index.html"><h3>Home</h3></a>
+                    <a class="no-style item" href="explore.html"><h3>Explore</h3></a>
+                    <a class="no-style item" href="rooms.html"><h3>Rooms</h3></a>
+                    <a class="no-style item" href="museum.html"><h3>Museum</h3></a>
+                    <a class="no-style item" href="entertainment.html"><h3>Entertainment</h3></a>
+                    <a class="no-style item selected" href="booking.html"><h3>Book Now!</h3></a>
+                    <div id="light-mode-container">
+                        <button id="dark-mode-button-desktop">
+                            <span id="dark-mode-text-desktop">Light Mode</span>
+                        </button>
+                    </div>
+                    <button id="hamburger" class="no-style">&#9776;</button>
+                </nav>
+                <div id="mobile-menu">
+                    <!-- Empty to allow transitions to work -->
+                </div>
+                <nav id="navbar-mobile">
+                    <img src="images/website_title_small_shadow.png" alt="RoA Tourism" id="mobile-logo">
+                    <a class="no-style item" href="index.html"><h3>Home</h3></a>
+                    <a class="no-style item" href="explore.html"><h3>Explore</h3></a>
+                    <a class="no-style item" href="rooms.html"><h3>Rooms</h3></a>
+                    <a class="no-style item" href="museum.html"><h3>Museum</h3></a>
+                    <a class="no-style item" href="entertainment.html"><h3>Entertainment</h3></a>
+                    <a class="no-style item selected" href="booking.html"><h3>Book Now!</h3></a>
+                    <button id="dark-mode-button-mobile">
+                        <span id="dark-mode-text-mobile">Light Mode</span>
+                    </button>
+                    <button id="mobile-arrow" class="no-style">&#10095;</button>
+                </nav>
+            </header>
+            <section class="container">
+                <h2 class="header">Bookings</h2>
+                <form id="main-form">
+                    <!-- Personal details sub-form -->
+                    <button id="s1_button" class="collapse_button" type="button">
+                        <h3>Your Name</h3>
+                        <!-- <h3 class="form-close">&#9650;</h3> -->
+                        <!-- <h3 class="form-open">&#9660;</h3> -->
+                    </button>
+                    <div id="form_s1" class="form_section">
+                        <label for="first-name">First name:</label>
+                        <input type="text" id="first-name" name="first-name"><br>
+                        <label for="last-name">Last name:</label>
+                        <input type="text" id="last-name" name="last-name"><br>
+                        <label for="phone">Phone Number:</label>
+                        <input type="text" id="phone" name="phone">
+                    </div>
+                    <!-- Room booking sub form -->
+                    <button id="s2_button" class="collapse_button" type="button">
+                        <h3>Room Number</h3>
+                        <!-- <h3 class="form-close">&#9650;</h3> -->
+                        <!-- <h3 class="form-open">&#9660;</h3> -->
+                    </button>
+                    <div id="form_s2" class="form_section">
+                        <label for="room">Room Number:</label>
+                        <select id="room-type" name="room">
+                            <option>Select Room</option>
+                            <!-- 2 people -->
+                            <option value="ai-room">AI Revolution Master Suite</option>
+                            <!-- 4 people -->
+                            <option value="prison-room">Child Slavery Family Suite</option>
+                            <!-- 1 person -->
+                            <option value="minimalist-room">Minimalist Studio</option>
+                        </select><br>
+                        <label for="no-days">Adults:</label>
+                        <input type="text" id="no-days" name="no-days"><br>
+                        <label for="no-adults">Adults:</label>
+                        <input type="text" id="adults" name="no-adults"><br>
+                        <label for="no-children">Children:</label>
+                        <input type="text" id="children" name="no-children"><br>
+                    </div>
+                    <!-- Museum booking sub form -->
+                    <button id="s3_button" class="collapse_button" type="button">
+                        <h3>Museum Tours</h3>
+                        <!-- <h3 class="form-close">&#9650;</h3> -->
+                        <!-- <h3 class="form-open">&#9660;</h3> -->
+                    </button>
+                    <div id="form_s3" class="form_section">
+                        <label for="museum">Room Number:</label>
+                        <select id="museum-type" name="museum">
+                            <option>Select Tour</option>
+                            <option value="future-tour">An Impossible Future Exhibit</option>
+                            <option value="war-tour">Millennia Of War Exhibit</option>
+                            <option value="giants-tour">On The Shoulder Of Giants Exhibit</option>
+                        </select><br>
+                        <label for="no-tickets">Tickets:</label>
+                        <input type="text" id="tickets" name="no-tickets"><br>
+                        <label for="tour-date">Preferred Date:</label>
+                        <input type="date" id="date" name="tour-date">
+                    </div>
+                    <!-- Payment details sub form -->
+                    <button id="s4_button" class="collapse_button" type="button">
+                        <h3>Payment Details</h3>
+                        <!-- <h3 class="form-close">&#9650;</h3> -->
+                        <!-- <h3 class="form-open">&#9660;</h3> -->
+                    </button>
+                    <div id="form_s4" class="form_section">
+                        <label for="credit-card">Credit Card:</label>
+                        <input type="text" id="creditcard" name="credit-card"><br>
+                    </div>
+                </form>
+                <button type="submit" form="booking" value="Submit" id="form-button">Submit!</button>
+            </section>
+            <section id="references" class="container">
+                <div class="divider item"></div>
+                <button class="no-style item container">
+                    <h2 class="item">References</h2>
+                    <span id="references-tab" class="item">&#9660;</span>
+                </button>
+                <div class="divider item"></div>
+                <aside id="reference-data" class="item">
+                    <h3>Images</h3>
+                    <p>Icons8. "Gray rocket icon." IconsDB. https://www.iconsdb.com/gray-icons/rocket-icon.html (retrieved June 2 2021).</p>
+                    <h3>JavaScript</h3>
+                    <p>Refsnes Data. "How to create a sticky navbar." W3Schools. https://www.w3schools.com/howto/howto_js_navbar_sticky.asp (retrieved May 17 2021).</p>
+                    <p>Refsnes Data. "How to create a collapsible." W3Schools. https://www.w3schools.com/howto/howto_js_collapsible.asp (retrieved June 1 2021).</p>
+                    <p>Mozilla. "Window.localStorage." MDN. https://developer.mozilla.org/en-US/docs/Web/API/Window/localStorage (retrieved May 28 2021).</p>
+                    <h3>HTML & CSS</h3>
+                    <p>C. Coyier. "A Complete Guide to Flexbox." CSS Tricks. https://css-tricks.com/snippets/css/a-guide-to-flexbox/ (retrieved May 8 2021).</p>
+                </aside>
+            </section>
+        </div>
+        <footer>
+            <img src="images/rocket_logo_shadow.png" alt="Website logo" id="img-logo">
+            <aside>
+                <ul>
+                    <li>Designed by Eamon O'Brien</li>
+                    <li>Republic of Asia Ministry of Tourism</li>
+                    <li>Copyright 2071</li>
+                </ul>
+            </aside>
+            <nav>
+                <h4>Contact Us:</h4>
+                <table>
+                    <tr>
+                        <td>Email:</td>
+                        <td class="table-item"><a href="mailto:support@republicofasia.com">support@republicofasia.com</a></td>
+                    </tr>
+                    <tr>
+                        <td>Phone:</td>
+                        <td class="table-item"><a href="tel:0262777111">02 6277 7111</a></td>
+                    </tr>
+                    <tr>
+                        <td>International:</td>
+                        <td class="table-item"><a href="tel:+61262777111">+61 2 6277 7111</a></td>
+                    </tr>
+                    <tr>
+                        <td>Emergency:</td>
+                        <td class="table-item"><a title="From today, dialling 999 won't get you the emergency services. And that's not the only thing that's changing. Nicer ambulances, faster response times and better-looking drivers mean they’re not just 'the' emergency services – they're 'your' emergency services. So, remember the new number: &#9834; 0118 999 881 999 119 725 3 &#9834;" href="https://www.youtube.com/watch?v=ab8GtuPdrUQ" target="_blank">0118 999 881 999 119 725 3</a></td>
+                    </tr>
+                </table>
+            </nav>
+        </footer>
+    </body>
+</html>

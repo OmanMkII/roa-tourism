@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="author" content="Eamon O'Brien">
+
+        <meta name="color-scheme" content="dark light">
+
+        <link rel="stylesheet" href="css/style.css">
+        <link id="theme" rel="stylesheet" type="text/css" href="css/style_dark.css">
+
+        <link rel="shortcut icon" type="image/x-icon" href="favicon.ico" />
+
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+        <script src="js/script.js"></script>
+
+        <!-- TODO: make sure all pages are up to date with styles, links, js, etc. -->
+        <!-- TODO: make sure all pages are properly formatted (explore.html needs re-work) -->
+        <link rel="preconnect" href="https://fonts.gstatic.com">
+        <link href="https://fonts.googleapis.com/css2?family=Crimson+Text:ital,wght@0,400;0,600;0,700;1,400;1,600;1,700&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css2?family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap" rel="stylesheet">
+
+        <title>RoA Tourism | Home</title>
+    </head>
+    <body>
+        <div id="main-body">
+            <!-- TODO: Fill form from localStorage data -->
+            <!-- TODO: the map for timelines -->
+            <header>
+                <!-- Rocket logo adapted from https://www.iconsdb.com/gray-icons/rocket-icon.html -->
+                <img src="images/website_title_shadow.png" alt="RoA Tourism" id="main-logo">
+                <nav id="navbar">
+                    <img src="images/website_title_small_shadow.png" alt="RoA Tourism" id="nav-logo">
+                    <a class="no-style item selected" href="index.html"><h3>Home</h3></a>
+                    <a class="no-style item" href="explore.html"><h3>Explore</h3></a>
+                    <a class="no-style item" href="rooms.html"><h3>Rooms</h3></a>
+                    <a class="no-style item" href="museum.html"><h3>Museum</h3></a>
+                    <a class="no-style item" href="entertainment.html"><h3>Entertainment</h3></a>
+                    <a class="no-style item" href="booking.html"><h3>Book Now!</h3></a>
+                    <div id="light-mode-container">
+                        <button id="dark-mode-button-desktop">
+                            <span id="dark-mode-text-desktop">Light Mode</span>
+                        </button>
+                    </div>
+                    <button id="hamburger" class="no-style">&#9776;</button>
+                </nav>
+                <div id="mobile-menu">
+                    <!-- Empty to allow transitions to work -->
+                </div>
+                <nav id="navbar-mobile">
+                    <img src="images/website_title_small_shadow.png" alt="RoA Tourism" id="mobile-logo">
+                    <a class="no-style item selected" href="index.html"><h3>Home</h3></a>
+                    <a class="no-style item" href="explore.html"><h3>Explore</h3></a>
+                    <a class="no-style item" href="rooms.html"><h3>Rooms</h3></a>
+                    <a class="no-style item" href="museum.html"><h3>Museum</h3></a>
+                    <a class="no-style item" href="entertainment.html"><h3>Entertainment</h3></a>
+                    <a class="no-style item" href="booking.html"><h3>Book Now!</h3></a>
+                    <button id="dark-mode-button-mobile">
+                        <span id="dark-mode-text-mobile">Light Mode</span>
+                    </button>
+                    <button id="mobile-arrow" class="no-style">&#10095;</button>
+                </nav>
+            </header>
+            <section class="homepage">
+                <article class="item">
+                    <div>
+                        <h3>
+                            Explore the final frontier
+                        </h3>
+                        <p>Travel to space and experience the wonder of the stars - a chance that is only now becoming possible again! Look down on the pale blue dot in wonder as many have before, all while enjoying a first class luxury experience with full service provided.</p>
+                        <p>The Republic of Asia's new Excelsior cruise ship offers multiple levels, with premium packages also offering passengers access to onboard entertainment including media relics from past societies and some gambling.</p>
+                    </div>
+                </article>
+                <article class="item">
+                    <div>
+                        <h3>
+                            Discover new versions of history
+                        </h3>
+                        <p>Visitors have the unique opportunity to traverse time itself in this new branch of The Republic of Asia's Tourism Department, with technology recovered from unknown sources allowing travel to and from periods of time, as well as alternative versions of reality!</p>
+                        <p>Due to the volatility of the time continuum, all visitors are required to participate in Time Continuum Preservation & Restoration modules before embarking on supervised journeys. Although souvenirs are encouraged, both clothing and items able to be taken to a time period are highly restricted, with some available for purchase at the sales office if required.</p>
+                    </div>
+                </article>
+                <article class="item">
+                    <div>
+                        <h3>
+                            Relax in thematic rooms and halls
+                        </h3>
+                        <p>With the new advancements in technology, our resort has access to many interesting periods from history, and rooms for visitors have been decorated uniquely to capture as many interesting periods as possible. Each room has various displays with replicas of museum artifacts available for use during your visit, and all are available for purchase from the museum gift shop as well.</p>
+                        <p>Unfortunately due to their limited availability, some popular rooms such as the <em><a href="rooms.html#ai-revolution">AI Revolution</a></em> master suite and the <em><a href="rooms.html#child-slavery">Child Slavery</a></em> family suite (with realistic cells for the kids) may not be available.</p>
+                    </div>
+                </article>
+                <article class="item">
+                    <div>
+                        <h3>
+                            Dine like kings of old, or emperors of the future
+                        </h3>
+                        <p>Premium visitors will have gourmet food delivered to their rooms on request, and all visitors will have the unique opportunity of tasting authentic dishes from both past and future time periods available from a range of restaurants around the resort.</p>
+                        <p>In addition to well known historical dishes, chefs have expertly replicated dishes from alternative timelines: these dishes are featured weekly and rotated regularly as more interesting dishes are discovered.</p>
+                        <!-- TODO: link to a new page -->
+                        <p>For our cyborg visitors, the AI owned and operated <em><a href="entertainment.html#bits-and-pieces">Bits & Pieces Cyber Cafe</a></em> serves as an alternate eatery for datastream dependents.</p>
+                    </div>
+                </article>
+                <article class="item">
+                    <div>
+                        <h3>
+                            Learn more about the histories of the world
+                        </h3>
+                        <p>A museum is currently in the early stages of construction to display the many artifacts that have been recovered from historical periods both past and future, and will have visitors have limited access to the first display <em><a href="museum/impossible_future.html">An Impossible Future</a></em> on arrival, which catalogues some of the incredible alternate histories that have been discovered thus far.</p>
+                        <p>Two further exhibits are currently planned, <em><a href="museum/millennia_war.html">Millennia Of War</a></em> showcases the evolution of warfare throughout history, and <em><a href="museum/shoulders_of_giants.html">On The Shoulders Of Giants</a></em> follows the evolution of intelligent species from primate to humanoid and beyond.</p>
+                    </div>
+                </article>
+            </section>
+            <section id="references" class="container">
+                <div class="divider item"></div>
+                <button class="no-style item container">
+                    <h2 class="item">References</h2>
+                    <span id="references-tab" class="item">&#9660;</span>
+                </button>
+                <div class="divider item"></div>
+                <aside id="reference-data" class="item">
+                    <h3>Images</h3>
+                    <p>Icons8. "Gray rocket icon." IconsDB. https://www.iconsdb.com/gray-icons/rocket-icon.html (retrieved June 2 2021).</p>
+                    <p>NASA, "Oceans clouds seen from space." NASA. https://unsplash.com/photos/yZygONrUBe8 (retrieved May 21 2021).</p>
+                    <p>S. Davis. "Brown building on desert photo." Unsplash. https://unsplash.com/photos/Ivwyqtw3PzU (retrieved May 21 2021).</p>
+                    <p>E. Sazonova. "Woman leaning on handrail in room." Pexels. https://www.pexels.com/photo/woman-leaning-on-handrail-in-room-1838554/ (retrieved May 21).</p>
+                    <p>T. Cooper. "Cooked food on table photo." Unsplash. https://unsplash.com/photos/1R7iHPt63Lc (retrieved May 22 2021).</p>
+                    <p>L.W. Flood. "Clear glass display cabinet with with glass photo." Unsplash. https://unsplash.com/photos/guUPsagbLjY (retrieved May 27 2021).</p>
+                    <h3>JavaScript</h3>
+                    <p>Refsnes Data. "How to create a sticky navbar." W3Schools. https://www.w3schools.com/howto/howto_js_navbar_sticky.asp (retrieved May 17 2021).</p>
+                    <p>Refsnes Data. "How to create a collapsible." W3Schools. https://www.w3schools.com/howto/howto_js_collapsible.asp (retrieved June 1 2021).</p>
+                    <h3>HTML & CSS</h3>
+                    <p>C. Coyier. "A Complete Guide to Flexbox." CSS Tricks. https://css-tricks.com/snippets/css/a-guide-to-flexbox/ (retrieved May 8 2021).</p>
+                </aside>
+            </section>
+        </div>
+        <footer>
+            <img src="images/rocket_logo_shadow.png" alt="Website logo" id="img-logo">
+            <aside>
+                <ul>
+                    <li>Designed by Eamon O'Brien</li>
+                    <li>Republic of Asia's Ministry of Tourism</li>
+                    <li>Copyright 2071</li>
+                </ul>
+            </aside>
+            <nav>
+                <h4>Contact Us:</h4>
+                <table>
+                    <tr>
+                        <td>Email:</td>
+                        <td class="table-item"><a href="mailto:support@republicofasia.com">support@republicofasia.com</a></td>
+                    </tr>
+                    <tr>
+                        <td>Phone:</td>
+                        <td class="table-item"><a href="tel:0262777111">02 6277 7111</a></td>
+                    </tr>
+                    <tr>
+                        <td>International:</td>
+                        <td class="table-item"><a href="tel:+61262777111">+61 2 6277 7111</a></td>
+                    </tr>
+                    <tr>
+                        <td>Emergency:</td>
+                        <td class="table-item"><a title="From today, dialling 999 won't get you the emergency services. And that's not the only thing that's changing. Nicer ambulances, faster response times and better-looking drivers mean they’re not just 'the' emergency services – they're 'your' emergency services. So, remember the new number: &#9834; 0118 999 881 999 119 725 3 &#9834;" href="https://www.youtube.com/watch?v=ab8GtuPdrUQ" target="_blank">0118 999 881 999 119 725 3</a></td>
+                    </tr>
+                </table>
+            </nav>
+        </footer>
+    </body>
+</html>

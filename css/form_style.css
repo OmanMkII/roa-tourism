@@ -1,0 +1,49 @@
+form {
+    width: 100%;
+}
+
+.collapse_button {
+    width: 100%;
+    text-align: left;
+}
+
+button h3 {
+    font-family: 'Ubuntu', sans-serif;
+    font-size: x-large;
+    padding: 5px 15px;
+}
+
+#form-button {
+    font-family: 'Ubuntu', sans-serif;
+    font-size: large;
+    padding: 5px 15px
+}
+
+.form_section {
+    padding: 25px 18px;
+    max-height: 100%;
+    overflow: hidden;
+    transition: max-height 0.2s ease-out;
+}
+
+form div {
+    display: flex;
+    flex-flow: row wrap;
+    align-items: center;
+    justify-content: space-around;
+}
+
+form div > * {
+    flex: 1 0 45%;
+    padding: 5px 0;
+    margin: 5px 0;
+}
+
+form * {
+    font-family: 'Crimson Text', serif;
+    font-size: large;
+}
+
+input, select {
+    color: grey;
+}
