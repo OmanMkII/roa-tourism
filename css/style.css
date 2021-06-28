@@ -507,3 +507,28 @@ footer aside ul {
     display: flex;
     align-items: center;
 }
+
+/* No Script banner */
+
+.noscript-padding {
+    margin-top: 35px;
+}
+
+.noscript-banner {
+    font-weight: normal;
+    font-size: large;
+    padding: 5px 0;
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100%;
+    text-align: center;
+    z-index: 100;
+    height: 25px;
+    color: #b8b8b8;
+    background-color: #39527a;
+}
+
+.noscript-banner a {
+    color: #da6969;
+}
