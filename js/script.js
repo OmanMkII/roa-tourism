@@ -201,10 +201,10 @@ document.addEventListener("readystatechange", (event) => {
         });
 
         // window.onresize = () => {
-        //     console.log(`New window size of ${window.innerWidth} x ${window.innerHeight}`)
+        //     console.log(`New window size of ${window.innerWidth}px x ${window.innerHeight}px`)
         //     if (window.innerWidth > 1200) {
         //         console.log("Entering Desktop mode");
-        //     } else if (window.innerWidth > 700) {
+        //     } else if (window.innerWidth > 800) {
         //         console.log("Entering Tablet mode");
         //     } else {
         //         console.log("Entering Mobile mode");

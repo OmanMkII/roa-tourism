@@ -17,7 +17,7 @@ html, body {
 
 /* Desktop: width >= 1200px */
 /* Tablet: width < 1200px */
-/* Mobile: width < 700px */
+/* Mobile: width < 800px */
 
 /* Default mode is desktop, with @media queries adjusting settings */
 /* to suit either mobile or tablet should they be more suitable. */
@@ -217,7 +217,7 @@ header #main-logo {
     /* Tablet layout */
 }
 
-@media only screen and (max-width: 700px) {
+@media only screen and (max-width: 800px) {
     /* Mobile layout */
     #light-mode-container {
         display: none;
@@ -460,7 +460,7 @@ footer aside ul {
     left: 45%;
 }
 
-@media only screen and (max-width: 700px) {
+@media only screen and (max-width: 800px) {
     /* Mobile view */
     .homepage .item div {
         top: 10vh !important;
