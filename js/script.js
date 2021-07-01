@@ -1,13 +1,5 @@
 document.addEventListener("readystatechange", (event) => {
 
-    // Sends a HEAD request to a filepath, returns true if the file exists
-    function fileExists(filepath) {
-        let req = new XMLHttpRequest();
-        req.open('HEAD', filepath, false); // only care about the response
-        req.send();
-        return req.status === 200;
-    }
-
     // variables for dark mode
     var theme;
     var darkMode;
@@ -141,8 +133,7 @@ document.addEventListener("readystatechange", (event) => {
         // get filepath (museum/* files need relative adjustment)
         let cssPath = "css/";
         let imgPath = "images/";
-        if (! fileExists(cssPath + "style_dark.css")) {
-            console.log("NOTE: 404 error will be logged here, that's intended");
+        if (theme.getAttribute('href').includes('../')) {
             // I'm in a sub-folder, add parent dir
             cssPath = "../" + cssPath;
             imgPath = "../" + imgPath;
