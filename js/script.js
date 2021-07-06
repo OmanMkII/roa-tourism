@@ -1,5 +1,16 @@
 document.addEventListener("readystatechange", (event) => {
 
+    // Checks the user's device and returns true iff mobile device
+    // Used in conjunction with @media queries for error testing, and
+    //  should never be used *in place* of it!
+    function mobileDevice() {
+        if (/Android|webOS|iPhone|iPad|Mac|Macintosh|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent)) {
+            return navigator.userAgent;
+        } else {
+            return null;
+        }
+    }
+
     // Sends a HEAD request to a filepath, returns true if the file exists
     function fileExists(filepath) {
         let req = new XMLHttpRequest();
@@ -213,5 +224,15 @@ document.addEventListener("readystatechange", (event) => {
 
         // TODO: pre-fill form when clicking from map
         // https://stackoverflow.com/questions/901115/how-can-i-get-query-string-values-in-javascript
+
+        // If on a "real" mobile device, alert the user there's issues
+        let device = mobileDevice();
+        let wasWarned = localStorage.getItem('mobile-warning');
+        console.log(`Got device ${device}: warned as ${wasWarned}`);
+        if (device !== null && wasWarned !== 'true') {
+            alert(`Hi there!\n\nLooks like you\'re using a mobile device to access this website. This page has been tested with a desktop browser to simulate a mobile, but is still undergoing development for mobile deployment.\n\nPlease report any issues you encounter here:\nhttps://github.com/OmanMkII/roa-tourism/issues/new`);
+            wasWarned = true;
+            localStorage.setItem('mobile-warning', wasWarned);
+        }
     }
 });
