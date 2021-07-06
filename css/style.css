@@ -77,6 +77,11 @@ button.no-style {
     border: none;
 }
 
+@media only screen and (max-width: 1200px) {
+    /* Tablet or mobile font sizes */
+
+}
+
 /* Flexbox styles */
 
 .container {
@@ -215,6 +220,11 @@ header #main-logo {
 
 @media only screen and (max-width: 1200px) {
     /* Tablet layout */
+    header #main-logo {
+        width: 95%;
+        padding: 10px;
+    }
+
     #light-mode-container {
         display: none;
     }
@@ -232,24 +242,7 @@ header #main-logo {
     }
 }
 
-@media only screen and (max-width: 800px) {
-    /* Mobile layout */
-    #light-mode-container {
-        display: none;
-    }
-
-    #navbar {
-        justify-content: space-between;
-    }
-
-    #navbar .item {
-        min-width: 33%;
-    }
-
-    #navbar-mobile {
-        display: flex;
-    }
-}
+/* Mobile layout "same" as tablet here */
 
 /* The page itself */
 
@@ -315,6 +308,7 @@ h2 {
 
 #references {
     margin: 0 1%;
+    padding-bottom: 0;
     justify-content: space-evenly;
 }
 
@@ -483,7 +477,7 @@ footer aside ul {
     }
 
     .homepage .item div {
-        width: 80%;
+        width: 75%;
     }
 }
 

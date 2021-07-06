@@ -53,7 +53,6 @@ figcaption {
 }
 
 button {
-    background-color: var(--border-color);
     border: 1px var(--text-color) solid;
     box-shadow: var(--text-shadow-color) 1px 1px 4px;
     border-radius: 4px;
@@ -68,7 +67,7 @@ button * {
 
 /* The nav bar */
 
-#main-logo {
+header {
     background-color: var(--navbar-color);
 }
 
