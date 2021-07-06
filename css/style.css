@@ -469,6 +469,21 @@ footer aside ul {
     left: 45%;
 }
 
+@media only screen and (max-width: 1200px) {
+    /* Tablet view */
+    .homepage .item div {
+        left: 5% !important;
+    }
+
+    .homepage .item:nth-child(2n) div {
+        left: 25% !important;
+    }
+
+    .homepage .item div {
+        width: 60%;
+    }
+}
+
 @media only screen and (max-width: 800px) {
     /* Mobile view */
     .homepage .item div {
