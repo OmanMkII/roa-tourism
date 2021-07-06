@@ -215,6 +215,21 @@ header #main-logo {
 
 @media only screen and (max-width: 1200px) {
     /* Tablet layout */
+    #light-mode-container {
+        display: none;
+    }
+
+    #navbar {
+        justify-content: space-between;
+    }
+
+    #navbar .item {
+        min-width: 33%;
+    }
+
+    #navbar-mobile {
+        display: flex;
+    }
 }
 
 @media only screen and (max-width: 800px) {
