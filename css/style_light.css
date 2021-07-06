@@ -37,15 +37,14 @@ h3, h3 a {
     color: var(--primary-page-color);
 }
 
-body {
+body, p {
     color: var(--text-color);
     text-decoration: none;
 }
 
-/* Better suits the light theme */
 #navbar h3 {
-    color: var(--primary-page-color);
-    text-decoration-color: var(--primary-page-color);
+    color: var(--text-color);
+    text-decoration-color: var(--text-color);
     text-decoration: none;
 }
 
@@ -58,11 +57,22 @@ figcaption {
     padding: 5px 10px;
 }
 
+button {
+    border: 1px var(--text-color) solid;
+    box-shadow: var(--text-shadow-color) 1px 1px 4px;
+    border-radius: 4px;
+}
+
+button * {
+    color: var(--navbar-color);
+    font-size: large;
+}
+
 /* Flexbox styles */
 
 /* The nav bar */
 
-#main-logo {
+header {
     background-color: var(--navbar-color);
 }
 
@@ -76,7 +86,6 @@ figcaption {
 #navbar .item, #navbar-mobile .item {
     background-color: transparent;
 	text-shadow: 0.5px 0.5px var(--text-shadow-color);
-    /* color: black; */
 }
 
 #navbar .item:hover, #navbar-mobile .item:hover,
@@ -91,6 +100,10 @@ figcaption {
 
 #mobile-arrow {
     color: var(--text-color);
+}
+
+#navbar-mobile #mobile-logo {
+    box-shadow: 0px 2px 5px -4px var(--text-color);
 }
 
 #dark-mode-button-desktop, #dark-mode-button-mobile {

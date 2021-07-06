@@ -53,7 +53,6 @@ figcaption {
 }
 
 button {
-    background-color: var(--border-color);
     border: 1px var(--text-color) solid;
     box-shadow: var(--text-shadow-color) 1px 1px 4px;
     border-radius: 4px;
@@ -68,7 +67,7 @@ button * {
 
 /* The nav bar */
 
-#main-logo {
+header {
     background-color: var(--navbar-color);
 }
 
@@ -82,7 +81,6 @@ button * {
 #navbar .item, #navbar-mobile .item {
     background-color: transparent;
 	text-shadow: 0.5px 0.5px var(--text-shadow-color);
-    /* color: black; */
 }
 
 #navbar .item:hover, #navbar-mobile .item:hover,
@@ -97,6 +95,10 @@ button * {
 
 #mobile-arrow {
     color: var(--text-color);
+}
+
+#navbar-mobile #mobile-logo {
+    box-shadow: 0px 2px 5px -4px var(--text-color);
 }
 
 #dark-mode-button-desktop, #dark-mode-button-mobile {

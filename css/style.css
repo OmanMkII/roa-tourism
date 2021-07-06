@@ -17,7 +17,7 @@ html, body {
 
 /* Desktop: width >= 1200px */
 /* Tablet: width < 1200px */
-/* Mobile: width < 700px */
+/* Mobile: width < 800px */
 
 /* Default mode is desktop, with @media queries adjusting settings */
 /* to suit either mobile or tablet should they be more suitable. */
@@ -77,6 +77,32 @@ button.no-style {
     border: none;
 }
 
+@media only screen and (max-width: 1200px) {
+    /* Tablet or mobile font sizes */
+    h3 {
+        font-size: 2em !important;
+    }
+
+    #navbar > a {
+        padding: 10px !important;
+    }
+
+    #hamburger {
+        font-size: 2.5em !important;
+        padding-right: 25px !important;
+    }
+
+    #nav-logo {
+        max-height: 80px !important;
+        padding: 10px !important;
+    }
+
+    p {
+        font-size: 1.5em;
+        line-height: 1.2em;
+    }
+}
+
 /* Flexbox styles */
 
 .container {
@@ -85,7 +111,6 @@ button.no-style {
     align-items: center;
     justify-content: right;
     flex-wrap: wrap;
-    /* padding: 0 25% 50px 25%; */
     padding: 0 25% 0 25%;
 }
 
@@ -195,8 +220,7 @@ header #main-logo {
 }
 
 #navbar-mobile #mobile-logo {
-    max-width: 60%;
-    padding: 2%;
+    max-width: 100%;
 }
 
 #navbar-mobile #mobile-arrow {
@@ -215,10 +239,11 @@ header #main-logo {
 
 @media only screen and (max-width: 1200px) {
     /* Tablet layout */
-}
+    header #main-logo {
+        width: 95%;
+        padding: 10px;
+    }
 
-@media only screen and (max-width: 700px) {
-    /* Mobile layout */
     #light-mode-container {
         display: none;
     }
@@ -235,6 +260,8 @@ header #main-logo {
         display: flex;
     }
 }
+
+/* Mobile layout "same" as tablet here */
 
 /* The page itself */
 
@@ -280,7 +307,6 @@ h2 {
     display: none;
 }
 
-/* TODO: modify size checks, RE: 300ish px -- see forums! */
 @media only screen and (max-width: 1200px) {
     /* If small screen order text / img / text vertically */
     .item {
@@ -300,6 +326,7 @@ h2 {
 
 #references {
     margin: 0 1%;
+    padding-bottom: 0;
     justify-content: space-evenly;
 }
 
@@ -460,7 +487,22 @@ footer aside ul {
     left: 45%;
 }
 
-@media only screen and (max-width: 700px) {
+@media only screen and (max-width: 1200px) {
+    /* Tablet view */
+    .homepage .item div {
+        left: 5% !important;
+    }
+
+    .homepage .item:nth-child(2n) div {
+        left: 25% !important;
+    }
+
+    .homepage .item div {
+        width: 60%;
+    }
+}
+
+@media only screen and (max-width: 800px) {
     /* Mobile view */
     .homepage .item div {
         top: 10vh !important;
@@ -468,7 +510,7 @@ footer aside ul {
     }
 
     .homepage .item div {
-        width: 80%;
+        width: 75%;
     }
 }
 
