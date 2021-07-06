@@ -79,7 +79,28 @@ button.no-style {
 
 @media only screen and (max-width: 1200px) {
     /* Tablet or mobile font sizes */
+    h3 {
+        font-size: 2em !important;
+    }
 
+    #navbar > a {
+        padding: 10px !important;
+    }
+
+    #hamburger {
+        font-size: 2.5em !important;
+        padding-right: 25px !important;
+    }
+
+    #nav-logo {
+        max-height: 80px !important;
+        padding: 10px !important;
+    }
+
+    p {
+        font-size: 1.5em;
+        line-height: 1.2em;
+    }
 }
 
 /* Flexbox styles */
@@ -90,7 +111,6 @@ button.no-style {
     align-items: center;
     justify-content: right;
     flex-wrap: wrap;
-    /* padding: 0 25% 50px 25%; */
     padding: 0 25% 0 25%;
 }
 
@@ -200,8 +220,7 @@ header #main-logo {
 }
 
 #navbar-mobile #mobile-logo {
-    max-width: 60%;
-    padding: 2%;
+    max-width: 100%;
 }
 
 #navbar-mobile #mobile-arrow {
@@ -288,7 +307,6 @@ h2 {
     display: none;
 }
 
-/* TODO: modify size checks, RE: 300ish px -- see forums! */
 @media only screen and (max-width: 1200px) {
     /* If small screen order text / img / text vertically */
     .item {
