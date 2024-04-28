@@ -19,11 +19,12 @@ button h3 {
     font-family: 'Ubuntu', sans-serif;
     font-size: large;
     padding: 5px 15px;
+    border-radius: 8px;
 }
 
 .form_section {
-    padding: 15px 12px;
-    margin-bottom: 5px;
+    padding: 10px 22px;
+    margin-bottom: 12px;
     border: var(--border-color) 1px solid;
     border-bottom-left-radius: 12px;
     border-bottom-right-radius: 12px;
