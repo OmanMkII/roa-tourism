@@ -7,19 +7,23 @@ form {
     text-align: left;
     border-bottom-left-radius: 0;
     border-bottom-right-radius: 0;
+    background-color: var(--border-color);
 }
 
 button h3 {
     font-family: 'Ubuntu', sans-serif;
     font-size: x-large;
+    color: var(--primary-page-color);
     padding: 5px 15px;
 }
 
 #form-button {
     font-family: 'Ubuntu', sans-serif;
     font-size: large;
+    color: var(--text-color);
     padding: 5px 15px;
     border-radius: 8px;
+    background-color: var(--section-color);
 }
 
 .form_section {

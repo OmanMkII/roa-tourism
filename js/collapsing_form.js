@@ -64,8 +64,13 @@ window.addEventListener("load", () => {
     // submit textbox
     let formButton = document.getElementById("form-button");
     formButton.onclick = () => {
-        alert(`Hi ${document.getElementById("first-name")}! Thanks for booking with RoA Tourism!`);
-        document.getElementById("main-form").reset();
-        clearRoomData();
+        console.log(`Got name length as ${document.getElementById("first-name").value.length}.`);
+        if (document.getElementById("first-name").value.length == 0) {
+            alert("Please complete the form before submitting.");
+        } else {
+            alert(`Hi ${document.getElementById("first-name").value}! Thanks for booking with RoA Tourism!`);
+            document.getElementById("main-form").reset();
+            clearRoomData();
+        }
     }
 });
