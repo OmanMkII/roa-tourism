@@ -19,7 +19,7 @@ function getSelectedRoom() {
 }
 
 function setBorderWidth(reference) {
-    console.log("funct called");
+    console.log("Setting border width");
     if(reference.stlye.borderWidth == "0px") {
         reference.stlye.borderWidth = "1px";
     } else {
@@ -39,13 +39,13 @@ window.addEventListener("load", () => {
                 content.style.padding = "0px 22px";
                 setTimeout(() => {
                     content.style.borderWidth = "0px";
+                    item.style.borderRadius = "12px";
                 }, 200);
-                // content.style.borderWidth = "0px";
             } else {
                 content.style.maxHeight = content.scrollHeight + "px";
                 content.style.padding = "10px 22px";
                 content.style.borderWidth = "1px";
-                // content.style.borderWidth = "1px";
+                item.style.borderRadius = "12px 12px 0 0";
             }
         });
     }
