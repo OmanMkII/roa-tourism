@@ -55,7 +55,7 @@ figcaption {
 button {
     border: 1px var(--text-color) solid;
     box-shadow: var(--text-shadow-color) 1px 1px 4px;
-    border-radius: 4px;
+    border-radius: 12px;
 }
 
 button * {

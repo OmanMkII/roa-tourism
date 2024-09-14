@@ -72,28 +72,24 @@
                 <form id="main-form">
                     <!-- Personal details sub-form -->
                     <button id="s1_button" class="collapse_button" type="button">
-                        <h3>Your Name</h3>
-                        <!-- <h3 class="form-close">&#9650;</h3> -->
-                        <!-- <h3 class="form-open">&#9660;</h3> -->
+                        <h3>Tell Us About Yourself!</h3>
                     </button>
                     <div id="form_s1" class="form_section">
                         <label for="first-name">First name:</label>
-                        <input type="text" id="first-name" name="first-name"><br>
+                        <input type="text" id="first-name" name="first-name" placeholder="Your first name"><br>
                         <label for="last-name">Last name:</label>
-                        <input type="text" id="last-name" name="last-name"><br>
+                        <input type="text" id="last-name" name="last-name" placeholder="Your last name"><br>
                         <label for="phone">Phone Number:</label>
-                        <input type="text" id="phone" name="phone">
+                        <input type="text" id="phone" name="phone" placeholder="Your phone number">
                     </div>
                     <!-- Room booking sub form -->
                     <button id="s2_button" class="collapse_button" type="button">
-                        <h3>Room Number</h3>
-                        <!-- <h3 class="form-close">&#9650;</h3> -->
-                        <!-- <h3 class="form-open">&#9660;</h3> -->
+                        <h3>What Type of Room Would You Like?</h3>
                     </button>
                     <div id="form_s2" class="form_section">
-                        <label for="room">Room Number:</label>
+                        <label for="room">Room Type:</label>
                         <select id="room-type" name="room">
-                            <option>Select Room</option>
+                            <option value="none">Select Room</option>
                             <!-- 2 people -->
                             <option value="ai-room">AI Revolution Master Suite</option>
                             <!-- 4 people -->
@@ -101,31 +97,29 @@
                             <!-- 1 person -->
                             <option value="minimalist-room">Minimalist Studio</option>
                         </select><br>
-                        <label for="no-days">Adults:</label>
-                        <input type="text" id="no-days" name="no-days"><br>
+                        <label for="no-days">Number of Days:</label>
+                        <input type="text" id="no-days" name="no-days" placeholder="Number of days"><br>
                         <label for="no-adults">Adults:</label>
-                        <input type="text" id="adults" name="no-adults"><br>
+                        <input type="text" id="adults" name="no-adults" placeholder="Number of adults"><br>
                         <label for="no-children">Children:</label>
-                        <input type="text" id="children" name="no-children"><br>
+                        <input type="text" id="children" name="no-children" placeholder="Number of children"><br>
                     </div>
                     <!-- Museum booking sub form -->
                     <button id="s3_button" class="collapse_button" type="button">
-                        <h3>Museum Tours</h3>
-                        <!-- <h3 class="form-close">&#9650;</h3> -->
-                        <!-- <h3 class="form-open">&#9660;</h3> -->
+                        <h3>Would You Like to See The Museum?</h3>
                     </button>
                     <div id="form_s3" class="form_section">
-                        <label for="museum">Room Number:</label>
+                        <label for="museum">Tour Type:</label>
                         <select id="museum-type" name="museum">
-                            <option>Select Tour</option>
+                            <option value="none">None</option>
                             <option value="future-tour">An Impossible Future Exhibit</option>
                             <option value="war-tour">Millennia Of War Exhibit</option>
                             <option value="giants-tour">On The Shoulder Of Giants Exhibit</option>
                         </select><br>
-                        <label for="no-tickets">Tickets:</label>
-                        <input type="text" id="tickets" name="no-tickets"><br>
+                        <label for="no-tickets">Number of Tickets:</label>
+                        <input type="text" id="tickets" name="no-tickets" placeholder="Number of tickets"><br>
                         <label for="tour-date">Preferred Date:</label>
-                        <input type="date" id="date" name="tour-date">
+                        <input type="date" id="date" name="tour-date" placeholder="Date of booking">
                     </div>
                 </form>
                 <button type="submit" form="booking" value="Submit" id="form-button">Submit!</button>
