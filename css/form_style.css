@@ -7,13 +7,14 @@ form {
     text-align: left;
     border-bottom-left-radius: 0;
     border-bottom-right-radius: 0;
-    background-color: var(--border-color);
+    background-color: var(--navbar-color);
 }
 
 button h3 {
     font-family: 'Ubuntu', sans-serif;
     font-size: x-large;
-    color: var(--primary-page-color);
+    font-weight: normal;
+    color: var(--text-color);
     padding: 5px 15px;
 }
 
@@ -23,7 +24,7 @@ button h3 {
     color: var(--text-color);
     padding: 5px 15px;
     border-radius: 8px;
-    background-color: var(--section-color);
+    background-color: var(--navbar-color);
 }
 
 .form_section {
@@ -56,8 +57,19 @@ form * {
 }
 
 input, select {
-    color: #222426;
+    color: var(--text-color);
+    border: var(--text-color) 1px solid;
     border-radius: 5px;
+    background-color: var(--navbar-color);
+}
+
+form input[type="text"] {
+    box-sizing: border-box;
+    padding-left: 5px;
+}
+
+form input::placeholder {
+    padding: 5px;
 }
 
 label {
