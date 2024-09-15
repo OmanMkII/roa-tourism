@@ -54,12 +54,11 @@ window.addEventListener("load", () => {
     let roomData = getSelectedRoom();
     let roomChoice = document.getElementById("room-type");
     let roomDays = document.getElementById("no-days");
-    // console.log(`Got data as ${roomData}`);
     if (roomData !== null) {
         roomChoice.value = roomData[0] + "-room";
         roomDays.value = roomData[1];
     }
-    let museumChoice = document.getElementById("museum-type");
+    let museumChoice = document.getElementById("museum-type").value;
 
     // submit textbox
     let formButton = document.getElementById("form-button");
@@ -87,18 +86,15 @@ window.addEventListener("load", () => {
                         }
                     });
                 } else if (key == "set-3") {
-                    let museumChoice = True;
-                    console.info(`set museum choice ${museumChoice}`);
-                    console.info(`Got value ${element[0]} with data ${document.getElementById(element[0]).value}.`);
+                    let visitMuseum = true;
                     value.forEach(element => {
                         console.info(`Got value ${element} with data ${document.getElementById(element).value}.`);
                         if (element == "museum-type" && document.getElementById(element).value == "none") {
                             if (confirm("Are you sure you don't want to visit the museum?")) {
-                                // set a variable to ignore the rest of the loop
-                                museumChoice = False;
+                                // set a variable to ignore the rest of the checks
+                                visitMuseum = false;
                             }
-                            alert('blah');
-                        } else if (museumChoice && (document.getElementById(element).value == null ||
+                        } else if (visitMuseum && (document.getElementById(element).value == null ||
                                 document.getElementById(element).value.length == 0)) {
                             alert("Please fill out Section 3 to visit the museum.");
                             throw BreakLoop;
@@ -114,10 +110,6 @@ window.addEventListener("load", () => {
             return;
         }
 
-        // if (document.getElementById("first-name").value.length == 0) {
-        //     alert("Please complete the form before submitting.");
-        // } else {
-        // }
         alert(`Hi ${document.getElementById("first-name").value}! Thanks for booking with RoA Tourism!`);
         document.getElementById("main-form").reset();
         clearRoomData();
