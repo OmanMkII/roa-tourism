@@ -68,45 +68,53 @@ window.addEventListener("load", () => {
             "set-2": ["room-type", "no-days", "adults", "children"],
             "set-3": ["museum-type", "tickets", "date"]
         };
+        let intFields = [
+            "phone", "no-days", "adults", "children", "tickets"
+        ];
         console.debug(`Got name length as ${document.getElementById("first-name").value.length}.`);
         // apparently this is the way I'm meant to break a foreach in JS
         try {
+            let visitMuseum = true;
             for (const [key, value] of Object.entries(fields)) {
-                console.debug(`Got key ${key}, value ${value}`);
-                if (key == "set-1" || key == "set-2") {
-                    value.forEach(element => {
-                        console.info(`Got value ${element} with data ${document.getElementById(element).value}.`);
-                        if (document.getElementById(element).value == null ||
-                                document.getElementById(element).value.length == 0) {
-                            alert("Please complete Section " + (key == 'set-1' ? "1" : "2") + " before submitting.");
-                            throw BreakLoop;
-                        } else if (element == "room-type" && document.getElementById(element).value == "none") {
-                            alert("Please Select a room type.");
-                            throw BreakLoop;
+                console.debug(`Got key '${key}', value '${value}', visitMuseum '${visitMuseum}'`);
+                value.forEach(element => {
+                    console.info(`Got value '${element}' with data '${document.getElementById(element).value}'.`);
+                    console.info("needs int: ", intFields.includes(element));
+                    console.info("regex: ", document.getElementById(element).value.match(/^\+?[\d]+$/),
+                        document.getElementById(element).value.match(/^\+?[\d]+$/) == null);
+                    console.info(intFields.includes(element) &&
+                        document.getElementById(element).value.match(/^\+?[\d]+$/) == null);
+                    if ((value == "set-3" && visitMuseum) &&
+                            (document.getElementById(element).value == null ||
+                            document.getElementById(element).value.length == 0)) {
+                        // alert for the part of the form that's incomplete
+                        alert("Please complete Section " + (key == 'set-1' ? "1" : (key == 'set-2' ? "2" : "3")) +
+                            " before submitting.");
+                        throw new Error("Incomplete form.");
+                    } else if (element == "room-type" && document.getElementById(element).value == "none") {
+                        alert("Please Select a room type.");
+                        throw new Error("No room selected.");
+                    } else if (element == "museum-type" && document.getElementById(element).value == "none") {
+                        if (confirm("Are you sure you don't want to visit the museum?")) {
+                            // set a variable to ignore the rest of the checks
+                            console.info("User not visiting museum.");
+                            visitMuseum = false;
+                        } else {
+                            console.info("User visiting museum.");
+                            throw new Error("No museum selected.");
                         }
-                    });
-                } else if (key == "set-3") {
-                    let visitMuseum = true;
-                    value.forEach(element => {
-                        console.info(`Got value ${element} with data ${document.getElementById(element).value}.`);
-                        if (element == "museum-type" && document.getElementById(element).value == "none") {
-                            if (confirm("Are you sure you don't want to visit the museum?")) {
-                                // set a variable to ignore the rest of the checks
-                                visitMuseum = false;
-                            }
-                        } else if (visitMuseum && (document.getElementById(element).value == null ||
-                                document.getElementById(element).value.length == 0)) {
-                            alert("Please fill out Section 3 to visit the museum.");
-                            throw BreakLoop;
-                        }
-                    });
-                } else {
-                    console.error(`Error: ${key} is an unexpected key in Json string.`);
-                    return;
-                }
+                    } else if (visitMuseum && (document.getElementById(element).value == null ||
+                            document.getElementById(element).value.length == 0)) {
+                        alert("Please fill out Section 3 to visit the museum.");
+                        throw new Error("Section 3 incomplete.");
+                    } else if (intFields.includes(element.id) && document.getElementById(element).value.match(/^\+?[\d]+$/) == null) {
+                        alert(`Field ${element} needs to have an integer value.`);
+                        throw new Error("Not a number.");
+                    }
+                });
             }
-        } catch(BreakLoop) {
-            console.debug("Caught exception to break loop");
+        } catch(e) {
+            console.error(e);
             return;
         }
 
