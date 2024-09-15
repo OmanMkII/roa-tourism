@@ -66,39 +66,51 @@ window.addEventListener("load", () => {
     formButton.onclick = () => {
         let fields = {
             "set-1": ["first-name", "last-name", "phone"],
-            "set-2": ["room-type", "no-days", "no-adults", "no-children"],
-            "set-3": ["museum-type", "no-tickets", "tour-date"]
+            "set-2": ["room-type", "no-days", "adults", "children"],
+            "set-3": ["museum-type", "tickets", "date"]
         };
-        console.log(`Got name length as ${document.getElementById("first-name").value.length}.`);
-        console.log("Looping through form data.");
+        console.debug(`Got name length as ${document.getElementById("first-name").value.length}.`);
         // apparently this is the way I'm meant to break a foreach in JS
         try {
             for (const [key, value] of Object.entries(fields)) {
-                console.log(`Got key ${key}, value ${value}`);
+                console.debug(`Got key ${key}, value ${value}`);
                 if (key == "set-1" || key == "set-2") {
                     value.forEach(element => {
-                        console.log(`Got value ${element}`);
+                        console.info(`Got value ${element} with data ${document.getElementById(element).value}.`);
                         if (document.getElementById(element).value == null ||
                                 document.getElementById(element).value.length == 0) {
                             alert("Please complete Section " + (key == 'set-1' ? "1" : "2") + " before submitting.");
                             throw BreakLoop;
+                        } else if (element == "room-type" && document.getElementById(element).value == "none") {
+                            alert("Please Select a room type.");
+                            throw BreakLoop;
                         }
                     });
-                } else if (element == "set-3") {
-                    value.forEach(el => {
-                        if (document.getElementById(element).value == null ||
-                                document.getElementById(element).value.length == 0) {
-                            alert("Please fill out Section 3.");
+                } else if (key == "set-3") {
+                    let museumChoice = True;
+                    console.info(`set museum choice ${museumChoice}`);
+                    console.info(`Got value ${element[0]} with data ${document.getElementById(element[0]).value}.`);
+                    value.forEach(element => {
+                        console.info(`Got value ${element} with data ${document.getElementById(element).value}.`);
+                        if (element == "museum-type" && document.getElementById(element).value == "none") {
+                            if (confirm("Are you sure you don't want to visit the museum?")) {
+                                // set a variable to ignore the rest of the loop
+                                museumChoice = False;
+                            }
+                            alert('blah');
+                        } else if (museumChoice && (document.getElementById(element).value == null ||
+                                document.getElementById(element).value.length == 0)) {
+                            alert("Please fill out Section 3 to visit the museum.");
                             throw BreakLoop;
                         }
                     });
                 } else {
-                    console.error(`Error: ${key} is an unexpected tag in Json string.`);
+                    console.error(`Error: ${key} is an unexpected key in Json string.`);
                     return;
                 }
             }
         } catch(BreakLoop) {
-            console.log("Caught exception to break loop");
+            console.debug("Caught exception to break loop");
             return;
         }
 
