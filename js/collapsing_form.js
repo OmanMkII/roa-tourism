@@ -71,24 +71,21 @@ window.addEventListener("load", () => {
         let intFields = [
             "phone", "no-days", "adults", "children", "tickets"
         ];
+        let museumFields = [
+            // we're ignoring this for now -- "museum-type",
+            "tickets", "date"
+        ];
         console.debug(`Got name length as ${document.getElementById("first-name").value.length}.`);
         // apparently this is the way I'm meant to break a foreach in JS
         try {
             let visitMuseum = true;
             for (const [key, value] of Object.entries(fields)) {
-                console.debug(`Got key '${key}', value '${value}', visitMuseum '${visitMuseum}'`);
                 value.forEach(element => {
-                    console.info(`Got value '${element}' with data '${document.getElementById(element).value}'.`);
-                    console.info("needs int: ", intFields.includes(element));
-                    console.info("regex: ", document.getElementById(element).value.match(/^\+?[\d]+$/),
-                        document.getElementById(element).value.match(/^\+?[\d]+$/) == null);
-                    console.info(intFields.includes(element) &&
-                        document.getElementById(element).value.match(/^\+?[\d]+$/) == null);
-                    if ((value == "set-3" && visitMuseum) &&
+                    if ((key === "set-1" || key === "set-2") &&
                             (document.getElementById(element).value == null ||
                             document.getElementById(element).value.length == 0)) {
                         // alert for the part of the form that's incomplete
-                        alert("Please complete Section " + (key == 'set-1' ? "1" : (key == 'set-2' ? "2" : "3")) +
+                        alert("Please complete Section " + (key == 'set-1' ? "1" : "2") +
                             " before submitting.");
                         throw new Error("Incomplete form.");
                     } else if (element == "room-type" && document.getElementById(element).value == "none") {
@@ -100,16 +97,24 @@ window.addEventListener("load", () => {
                             console.info("User not visiting museum.");
                             visitMuseum = false;
                         } else {
-                            console.info("User visiting museum.");
+                            console.info("User visiting museum; form incomplete.");
                             throw new Error("No museum selected.");
                         }
-                    } else if (visitMuseum && (document.getElementById(element).value == null ||
-                            document.getElementById(element).value.length == 0)) {
+                    } else if (element == "date" && !document.getElementById(element)) {
+                        // better practice here would be `if (!Date.parse(id))` but we want crazy values in this case :)
                         alert("Please fill out Section 3 to visit the museum.");
                         throw new Error("Section 3 incomplete.");
-                    } else if (intFields.includes(element.id) && document.getElementById(element).value.match(/^\+?[\d]+$/) == null) {
-                        alert(`Field ${element} needs to have an integer value.`);
-                        throw new Error("Not a number.");
+                    } else if (intFields.includes(element) && document.getElementById(element).value.match(/^\+?[\d]+$/) == null) {
+                        if (element == "tickets" && visitMuseum) {
+                            alert(`Field ${element} needs to have an integer value.`);
+                            console.info(`caught field ${element} as empty when visiting museum`);
+                            throw new Error("Not a number.");
+                        } else if (element != "tickets") {
+                            alert(`Field ${element} needs to have an integer value.`);
+                            throw new Error("Not a number.");
+                        } else {
+                            console.info(`Field ${element} ignored.`);
+                        }
                     }
                 });
             }
