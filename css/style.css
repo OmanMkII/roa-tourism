@@ -574,3 +574,269 @@ footer aside ul {
 .noscript-banner a {
     color: #da6969;
 }
+
+/* Some specific styles for the added buttons in the rooms page */
+
+.image > .image {
+    align-self: flex-start;
+}
+
+.image > .booking {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.booking, .booking .item {
+    padding: 0;
+}
+
+.booking .plus,
+.booking .minus {
+    text-align: center;
+    font-size: xx-large;
+}
+
+.booking .value,
+.booking p {
+    text-align: center;
+    font-size: x-large;
+    margin: 0;
+}
+
+.booking > div {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+.booking > .header {
+    flex: 1 0 100%;
+    padding-top: 5px;
+    padding-bottom: 10px;
+}
+
+.booking .item {
+    flex: 1 0 auto;
+}
+
+.booking .item * {
+    flex: 2 0 auto;
+}
+
+.booking .item p {
+    flex: 5 0 auto;
+}
+
+.booking .select {
+    height: 35px;
+    border-radius: 4px;
+}
+
+/* Script free option */
+
+noscript {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+}
+
+noscript .select {
+    padding: 0 15px;
+    margin: 10px;
+}
+
+/* Form styles */
+
+form {
+    width: 100%;
+}
+
+.collapse_button {
+    width: 100%;
+    text-align: left;
+    border-bottom-left-radius: 0;
+    border-bottom-right-radius: 0;
+    background-color: var(--navbar-color);
+}
+
+button h3 {
+    font-family: 'Ubuntu', sans-serif;
+    font-size: x-large;
+    font-weight: normal;
+    color: var(--text-color);
+    padding: 5px 15px;
+}
+
+#form-button {
+    font-family: 'Ubuntu', sans-serif;
+    font-size: large;
+    color: var(--text-color);
+    padding: 5px 15px;
+    border-radius: 8px;
+    background-color: var(--navbar-color);
+}
+
+.form_section {
+    padding: 10px 22px;
+    margin-bottom: 12px;
+    border: var(--border-color) 1px solid;
+    border-bottom-left-radius: 12px;
+    border-bottom-right-radius: 12px;
+    max-height: 100%;
+    overflow: hidden;
+    transition: max-height 0.2s ease-out;
+}
+
+form div {
+    display: flex;
+    flex-flow: row wrap;
+    align-items: center;
+    justify-content: space-around;
+}
+
+form div > * {
+    flex: 1 0 45%;
+    padding: 5px 0;
+    margin: 5px 0;
+}
+
+form * {
+    font-family: 'Crimson Text', serif;
+    font-size: large;
+}
+
+input, select {
+    color: var(--text-color);
+    border: var(--text-color) 1px solid;
+    border-radius: 5px;
+    background-color: var(--navbar-color);
+}
+
+form input[type="text"] {
+    box-sizing: border-box;
+    padding-left: 5px;
+}
+
+form input::placeholder {
+    padding: 5px;
+}
+
+label {
+    font-size: x-large;
+}
+
+/* Interactive map styles */
+
+#map {
+    background: url(../images/long-road.jpg) left center/100% no-repeat;
+    width: 100%;
+    height: 500px;
+}
+
+.location {
+    top: 10%;
+    left: 10%;
+}
+
+.location {
+    transition: background-color 250ms cubic-bezier(0.55, 0, 0.1, 1);
+    max-height: 300px;
+    max-width: 300px;
+}
+
+#loc1 {
+    position: relative;
+    top: 25%;
+    left: 25%;
+}
+
+#loc2 {
+    position: relative;
+    top: 0;
+    left: 75%;
+}
+
+#loc3 {
+    position: relative;
+    top: -25%;
+    left: 25%;
+}
+
+.location_information img, .location_icon img {
+    width: 25px;
+}
+
+.location_icon {
+    display: block;
+    font-weight: bold;
+    text-transform: uppercase;
+    position: absolute;
+    width: 240px;
+    font-family: 'Roboto', serif;
+    color: #111f1d;
+    font-weight: 900;
+}
+
+.location_icon p {
+    position: relative;
+    left: -30px;
+}
+
+.location_information {
+    background: #1aa6e2;
+    border-radius: 50%;
+    width: 150px;
+    height: 150px;
+    text-align: center;
+    color: white;
+    padding: 40px 40px 20px;
+    overflow: hidden;
+    transform: scale(0);
+    opacity: 0;
+    transition: all 0.5s cubic-bezier(0.55, 0, 0.1, 1);
+    position: relative;
+    top: -35px;
+    left: -100px;
+}
+
+.location_information.active {
+    opacity: 1;
+    transform: scale(1);
+}
+
+.location_icon {
+    display: block;
+}
+
+/* TODO: use the right cursor for elements of this page */
+/* https://developer.mozilla.org/en-US/docs/Web/CSS/cursor */
+
+/* TODO: need to shrink this container, currently a massive empty thing is clickable!! */
+
+/* TODO: draw lines between the bubbles */
+/* https://stackoverflow.com/questions/8672369/how-to-draw-a-line-between-two-divs */
+.location {
+    z-index: 30;
+    position: absolute;
+    top: 46%;
+    left: 12px;
+	outline: none;
+    cursor: pointer;
+}
+
+.location.active {
+    z-index: 30;
+    margin: 0;
+}
+
+.location.active .location_data {
+    opacity: 1;
+    display: inline-table;
+    transform: scale(1);
+	position: relative;
+    z-index: 20;
+    width: 100%;
+    height: 100%;
+}
